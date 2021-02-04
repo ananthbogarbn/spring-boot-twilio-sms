@@ -11,8 +11,8 @@ import com.twilio.type.PhoneNumber;
 @SpringBootApplication
 public class SpringBootTwilioSmsApplication implements CommandLineRunner{
 
-	private final static String ACCOUNT_SID = "AC4aaa706550ad356b0da04f6028142f33";
-	private final static String AUTH_TOKEN = "848fce7c435e60a828e94de9814cf47c";
+	private final static String ACCOUNT_SID = "*******************";
+	private final static String AUTH_TOKEN = "********************";
 	
 	public static void main(String[] args) {
 		SpringApplication.run(SpringBootTwilioSmsApplication.class, args);
@@ -22,7 +22,7 @@ public class SpringBootTwilioSmsApplication implements CommandLineRunner{
 	public void run(String... args) throws Exception {
 		Twilio.init(ACCOUNT_SID, AUTH_TOKEN);
 		
-		Message.creator(new PhoneNumber("+918660504272"), new PhoneNumber("+19105373721"), "Hi, Greetings from Ananth").create();
+		Message.creator(new PhoneNumber("+918884634174"), new PhoneNumber("+19105373721"), "Hi Greetings from Ananth...").create();
 		System.out.println("Hi");
 		
 	}
